@@ -1,0 +1,838 @@
+{
+  "Dog Breeds": [
+    {
+        "breed": "",
+        "group": "",
+        "size": "",
+        "hair": "",
+        "coat": ""
+    },
+    {
+        "breed": "Peruvian Inca Orchid",
+        "group": "Misc",
+        "size": "Standard",
+        "hair": "Hairless",
+        "coat": "Hairless"
+    },
+    {
+        "breed": "Doodle",
+        "group": "Misc",
+        "size": "Standard, Mini, Toy",
+        "hair": "Long",
+        "coat": "Curly, Combination"
+    },
+    {
+        "breed": "Austrailian Cattle Dog",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Austrailian Shepherd",
+        "group": "Herding",
+        "size": "Standard, Mini",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Belgian Malinois",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Border Collie",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Combination"
+    },  
+    {
+        "breed": "Corgi, Cardigan Welsh or Pembroke",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Double"
+    },
+    {
+        "breed": "Collie, Bearded",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Long, Rough",
+        "coat": "Double"
+    },
+    {
+        "breed": "Old English Sheepdog",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Corded, Double"
+    },
+    {
+        "breed": "Poodle",
+        "group": "",
+        "size": "Standard, Mini",
+        "hair": "Long",
+        "coat": "Corded, Curly"
+    },
+    {
+        "breed": "Poodle, Toy",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Corded, Curly"
+    },
+    {
+        "breed": "Shetland Sheepdog",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Afgan Hound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Silky"
+    },
+    {
+        "breed": "Coon Hound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Foxhound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Basenji",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Basset Hound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Beagle",
+        "group": "Hound",
+        "size": "Misc",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Bloodhound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Borzoi",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Mix",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Dachshund",
+        "group": "Hound", 
+        "size": "Standard, Mini",
+        "hair": "Wire, Smooth, Long",
+        "coat": "Wire, Single/Flat, Combination"
+    },
+    {
+        "breed": "Greyhound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Harrier",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Whippet",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Brussels Griffon",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Short, Wire",
+        "coat": "Single/Flat, Wire"
+    },
+    {
+        "breed": "Cavalier King Charles Spaniel",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Silky"
+    },
+    {
+        "breed": "Chihuahua",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long, Short",
+        "coat": "Single/Flat, Combination"
+    },
+    {
+        "breed": "Chinese Crested",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Hairless, Long",
+        "coat": "Hairless, Silky"
+    },
+    {
+        "breed": "Havanese",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Drop"
+    },
+    {
+        "breed": "Italian Greyhound",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Japanese Chin",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Combination"
+    },
+    {
+        "breed": "Maltese",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Drop"
+    },
+    {
+        "breed": "Manchester Terrier",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Miniature Pinscher",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Papillon",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Pekingese",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Pomeranian",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Pug",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Shih-Tzu",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Drop"
+    },
+    {
+        "breed": "Silky Terrier",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Drop"
+    },
+    {
+        "breed": "Yorkshire Terrier",
+        "group": "Toy",
+        "size": "Toy",
+        "hair": "Long",
+        "coat": "Drop"
+    },
+    {
+        "breed": "Bichon Frise",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Curly"
+    },
+    {
+        "breed": "Boston Terrier",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Bulldog",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Chinese Shar-Pei",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Chow Chow",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Dalmatian",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "French Bulldog",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Lhasa Apso",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Drop"
+    },
+    {
+        "breed": "Shiba Inu",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Double"
+    },
+    {
+        "breed": "Schipperke",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Double"
+    },
+    {
+        "breed": "Xoloitzcuintli",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Hairless",
+        "coat": "Hairless"
+    },
+    {
+        "breed": "Barbet",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Curly"
+    },
+    {
+        "breed": "Boykin Spaniel",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Curly"
+    },
+    {
+        "breed": "Brittany",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Combination"
+    },
+    {
+        "breed": "Chesapeake Bay Retriever",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Mix",
+        "coat": "Curly"
+    },
+    {
+        "breed": "Clumber Spaniel",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Cocker Spaniel",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double, Mix"
+    },
+    {
+        "breed": "English Setter",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Combination"
+    },
+    {
+        "breed": "Springer Spaniel",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Combination"
+    },
+    {
+        "breed": "German Pointer",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Short, Wire",
+        "coat": "Single/Flat, Wire"
+    },
+    {
+        "breed": "Golden Retriever",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Gordon Setter",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Combination"
+    },
+    {
+        "breed": "Irish Setter",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Combination"
+    },
+    {
+        "breed": "Labrador Retriever",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Nova Scotia Duck Tolling Retriever",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Vizsla",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Weimeraner",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Wirehaired Pinting Griffon",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Airedale",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "American Staffordshire Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Pitbull",
+        "group": "Misc",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Bedlington Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Curly"
+    },
+    {
+        "breed": "Border Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Bull Terrier",
+        "group": "Terrier",
+        "size": "Standard, Mini",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Cairn Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Combination"
+    },
+    {
+        "breed": "Kerry Blue Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Lakeland Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Schnauzer, Mini",
+        "group": "Terrier",
+        "size": "Mini",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Norfolk Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Norwich Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Rat Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Russell Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Parson Russell Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Scottish Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "West Highland White Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Soft Coated Wheaten Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Akita",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Alaskan Malamute",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Anatolian Shepherd",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Bernese Mountain Dog",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Boxer",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Cane Corso",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Doberman Pinscher",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Dogo Argentino",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Schnauzer",
+        "group": "Working",
+        "size": "Giant, Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Great Dane",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Great Pyrenees",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Greater Swiss Mountain Dog",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Newfoundland",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Portuguese Water Dog",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Curly"
+    },
+    {
+        "breed": "Rotweiler",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Saint Bernard",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Double"
+    },
+    {
+        "breed": "Samoyed",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Siberian Husky",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Double"
+    },
+    {
+        "breed": "Tibetan Mastiff",
+        "group": "Working",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Combination"
+    },
+    {
+        "breed": "Canaan Dog",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Double"
+    },
+    {
+        "breed": "German Shepherd",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Double",
+    },
+    {
+        "breed": "Puli",
+        "group": "Herding",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Corded"
+    },
+    {
+        "breed": "Pharaoh Hound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Plott Hound",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Short"
+    },
+    {
+        "breed": "Rhodesian Ridgeback",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Short",
+        "coat": "Single/Flat"
+    },
+    {
+        "breed": "Saluki",
+        "group": "Hound",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Silky"
+    },
+    {
+        "breed": "Affenpinscher",
+        "group": "Toy",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire"
+    },
+    {
+        "breed": "Keeshond",
+        "group": "Non-Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Flat-Coated Retriever",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Double"
+    },
+    {
+        "breed": "Curly-Coated Retriever",
+        "group": "Sporting",
+        "size": "Standard",
+        "hair": "Long",
+        "coat": "Curly"
+    },
+    {
+        "breed": "Dandie Dinmont Terrier",
+        "group": "Terrier",
+        "size": "Standard",
+        "hair": "Wire",
+        "coat": "Wire",
+    },
+  ]
+}
+```
