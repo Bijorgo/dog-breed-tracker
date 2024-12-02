@@ -1,13 +1,6 @@
 {
   "Dog Breeds": [
     {
-        "breed": "",
-        "group": "",
-        "size": "",
-        "hair": "",
-        "coat": ""
-    },
-    {
         "breed": "Peruvian Inca Orchid",
         "group": "Misc",
         "size": "Standard",
@@ -831,8 +824,7 @@
         "group": "Terrier",
         "size": "Standard",
         "hair": "Wire",
-        "coat": "Wire",
-    },
+        "coat": "Wire"
+    }
   ]
 }
-```
