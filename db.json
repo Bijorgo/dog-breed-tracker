@@ -754,7 +754,7 @@
         "group": "Herding",
         "size": "Standard",
         "hair": "Short",
-        "coat": "Double",
+        "coat": "Double"
     },
     {
         "breed": "Puli",
@@ -825,6 +825,13 @@
         "size": "Standard",
         "hair": "Wire",
         "coat": "Wire"
+    },
+    {
+        "breed": "Other",
+        "group": "Other",
+        "size": "Other",
+        "hair": "Other",
+        "coat": "Other"
     }
   ]
 }
