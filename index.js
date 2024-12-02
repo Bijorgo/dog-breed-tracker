@@ -14,14 +14,8 @@ console.log("JavaScript is running")
 //callbacks:
 
 
-/*
-function forDogs(breedData) {
-    breedData.forEach(element => {
-        const makeSubList = document.createElement("ul");
-        const dogInList = document.createElement("li")
-    });
-}
-    */
+
+
 // hold information about breed in db
 function breedDish(matchedBreed) {
     //make unordered list for db information to go into
@@ -43,18 +37,30 @@ function breedDish(matchedBreed) {
     coatItem.textContent = matchedBreed.coat;
     extraList.append(coatItem);
 
-    document.querySelector("li").append(extraList)
-}
+    document.querySelector("li").append(extraList);
+    return extraList;
+}; // close breedDish
+
+
+function mEnterEventHandler(listItem, matchedBreed) {
+    listItem.addEventListener("mouseenter", (event) => {
+        const extraList = breedDish(matchedBreed);
+        listItem.append(extraList);
+    
+    })
+}; // close mEnter 
+
 
 //submit handler
-function formInfo(breedData) {
+function submitFormInfo(breedData) {
+
     const form = document.querySelector("#dog-form");
+
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        console.log("form submitted");
+        //console.log("form submitted");
         // value of text input
         const breedInput = document.querySelector("#breed-lookup").value.trim();
-        console.log("Trimmed User Input:", breedInput);
         const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase());
 
         //if no breed found => handle it-to be changed later 
@@ -70,28 +76,10 @@ function formInfo(breedData) {
         const listADog = document.createElement("li");
         listADog.textContent = matchedBreed.breed;
         orderedListDogBreed.append(listADog);
-
-        const nestedList = document.createElement("ul");
-
-        breedDish(matchedBreed);
-
-        //nestedList.textContent = breedDish(matchedBreed);
-
-        //const nestedItems = document.createElement("li");
-        //nestedItems.textContent = breedDish(matchedBreed);
-        //nestedList.append(nestedItems);
-        listADog.append(nestedList);
-
+        // call event handler to display additional attributes from database
+        mEnterEventHandler(listADog, matchedBreed);
         
-        console.log(listADog);
        
-
-
-
-        
-        
-        
-
     }); // closes addEventListener
     
 }; //closes formInfo()
@@ -103,7 +91,7 @@ function main() {
     .then(data => {
             //do something with data
         const breedData = data["dog-breeds"];
-        formInfo(breedData);
+        submitFormInfo(breedData);
         
         
     }) //closes .then()
