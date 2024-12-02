@@ -11,17 +11,64 @@
     //create "favorite" function, dblclick event listener
 
 //callbacks:
-function breedInput(breedData){
-    
-    // create object with info?
-}
 
+//submit handler
 function formInfo(breedData) {
     const form = document.querySelector("#list");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        breedInput();
-        console.log("form Info")
+        // value of text input
+        const breedInput = document.querySelector("#breed-lookup").value.trim();
+        console.log("Trimmed User Input:", breedInput);
+        const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase());
+        console.log(matchedBreed);
+        console.log("breedInput check")
+        //if no breed found => handle it
+        if (!matchedBreed) {
+            console.log("Breed not found");
+        } else {
+            console.log("Found breed:", matchedBreed.breed);
+        };
+        
+        
+
+    }); // closes addEventListener
+    
+}; //closes formInfo()
+
+function retrieveDogInfo() {
+    fetch("./db.json")
+    .then(response => response.json())
+    .then(data => {
+            //do something with data
+        const breedData = data["dog-breeds"];
+        formInfo(breedData);
+        
+        
+    }) //closes .then()
+    .catch(error => console.error("Error fetching data.", error));
+}; //closes retrieveDogInfo()
+retrieveDogInfo();
+
+
+
+//NOTES:
+
+//Debugging under 2nd .then
+        /*
+        breedData.forEach(b => {
+            // Log the breed to see what's inside
+            console.log("Breed object:", b);
+
+            // Ensure the breed is a string
+            if (typeof b.breed !== 'string') {
+                console.error("Invalid breed data:", b);
+                return;
+            }
+            console.log(b.breed);
+        });
+        */
+
         /*
         //hold info from form
         const breed = document.querySelector("#breed-lookup").value;
@@ -40,27 +87,3 @@ function formInfo(breedData) {
         newDog.textContent = "Breed:" + (selectedBreed || "Unknown") + "Name:" + dogName;
         dogsInList.append(newDog);
         */
-
-    }); // closes addEventListener
-    
-}; //closes formInfo()
-
-function retrieveDogInfo() {
-    fetch("./db.json")
-    .then(response => response.json())
-    .then(breedData => {
-            //do something with data
-        // value of text input
-        const breedInput = document.querySelector("#breed-lookup").value;
-        const matchedBreed = breedData.find(b => b.breed === breedInput);
-        console.log(matchedBreed);
-        console.log("breedInput")
-        //if no breed found => handle it
-        if (!matchedBreed) {
-            console.log("Breed not found");
-        }
-        
-    }) //closes .then()
-    .catch(error => console.error("Error fetching data.", error));
-}; //closes retrieveDogInfo()
-retrieveDogInfo();

@@ -1,13 +1,15 @@
 {
-  "Dog-Breeds": [
+  "dog-breeds": [
     {
-        "breed:": "Peruvian Inca Orchid",
+        "id": "1",
+        "breed": "Peruvian Inca Orchid",
         "group": "Misc",
         "size": "Standard",
         "hair": "Hairless",
         "coat": "Hairless"   
     },
     {
+        "id": "2",
         "breed": "Doodle",
         "group": "Misc",
         "size": "Standard, Mini, Toy",
@@ -15,6 +17,7 @@
         "coat": "Curly, Combination"
     },
     {
+        "id": "3",
         "breed": "Austrailian Cattle Dog",
         "group": "Herding",
         "size": "Standard",
@@ -22,6 +25,7 @@
         "coat": "Short"
     },
     {
+        "id": "4",
         "breed": "Austrailian Shepherd",
         "group": "Herding",
         "size": "Standard, Mini",
@@ -29,6 +33,7 @@
         "coat": "Double"
     },
     {
+        "id": "5",
         "breed": "Belgian Malinois",
         "group": "Herding",
         "size": "Standard",
@@ -36,6 +41,7 @@
         "coat": "Short"
     },
     {
+        "id": "6",
         "breed": "Border Collie",
         "group": "Herding",
         "size": "Standard",
@@ -43,6 +49,7 @@
         "coat": "Combination"
     },  
     {
+        "id": "7",
         "breed": "Corgi, Cardigan Welsh or Pembroke",
         "group": "Herding",
         "size": "Standard",
@@ -50,6 +57,7 @@
         "coat": "Double"
     },
     {
+        "id": "8",
         "breed": "Collie, Bearded",
         "group": "Herding",
         "size": "Standard",
@@ -57,6 +65,7 @@
         "coat": "Double"
     },
     {
+        "id": "9",
         "breed": "Old English Sheepdog",
         "group": "Herding",
         "size": "Standard",
@@ -64,6 +73,7 @@
         "coat": "Corded, Double"
     },
     {
+        "id": "10",
         "breed": "Poodle",
         "group": "",
         "size": "Standard, Mini",
@@ -71,6 +81,7 @@
         "coat": "Corded, Curly"
     },
     {
+        "id": "11",
         "breed": "Poodle, Toy",
         "group": "Toy",
         "size": "Toy",
@@ -78,6 +89,7 @@
         "coat": "Corded, Curly"
     },
     {
+        "id": "12",
         "breed": "Shetland Sheepdog",
         "group": "Herding",
         "size": "Standard",
@@ -85,6 +97,7 @@
         "coat": "Double"
     },
     {
+        "id": "13",
         "breed": "Afgan Hound",
         "group": "Hound",
         "size": "Standard",
@@ -92,6 +105,7 @@
         "coat": "Silky"
     },
     {
+        "id": "14",
         "breed": "Coon Hound",
         "group": "Hound",
         "size": "Standard",
@@ -99,6 +113,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "15",
         "breed": "Foxhound",
         "group": "Hound",
         "size": "Standard",
@@ -106,6 +121,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "16",
         "breed": "Basenji",
         "group": "Hound",
         "size": "Standard",
@@ -113,6 +129,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "17",
         "breed": "Basset Hound",
         "group": "Hound",
         "size": "Standard",
@@ -120,6 +137,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "18",
         "breed": "Beagle",
         "group": "Hound",
         "size": "Misc",
@@ -127,6 +145,7 @@
         "coat": "Short"
     },
     {
+        "id": "19",
         "breed": "Bloodhound",
         "group": "Hound",
         "size": "Standard",
@@ -134,6 +153,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "20",
         "breed": "Borzoi",
         "group": "Hound",
         "size": "Standard",
@@ -141,6 +161,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "21",
         "breed": "Dachshund",
         "group": "Hound", 
         "size": "Standard, Mini",
@@ -148,6 +169,7 @@
         "coat": "Wire, Single/Flat, Combination"
     },
     {
+        "id": "22",
         "breed": "Greyhound",
         "group": "Hound",
         "size": "Standard",
@@ -155,6 +177,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "23",
         "breed": "Harrier",
         "group": "Hound",
         "size": "Standard",
@@ -162,6 +185,7 @@
         "coat": "Short"
     },
     {
+        "id": "24",
         "breed": "Whippet",
         "group": "Hound",
         "size": "Standard",
@@ -169,6 +193,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "25",
         "breed": "Brussels Griffon",
         "group": "Toy",
         "size": "Toy",
@@ -176,6 +201,7 @@
         "coat": "Single/Flat, Wire"
     },
     {
+        "id": "26",
         "breed": "Cavalier King Charles Spaniel",
         "group": "Toy",
         "size": "Toy",
@@ -183,6 +209,7 @@
         "coat": "Silky"
     },
     {
+        "id": "27",
         "breed": "Chihuahua",
         "group": "Toy",
         "size": "Toy",
@@ -190,6 +217,7 @@
         "coat": "Single/Flat, Combination"
     },
     {
+        "id": "28",
         "breed": "Chinese Crested",
         "group": "Toy",
         "size": "Toy",
@@ -197,6 +225,7 @@
         "coat": "Hairless, Silky"
     },
     {
+        "id": "29",
         "breed": "Havanese",
         "group": "Toy",
         "size": "Toy",
@@ -204,6 +233,7 @@
         "coat": "Drop"
     },
     {
+        "id": "30",
         "breed": "Italian Greyhound",
         "group": "Toy",
         "size": "Toy",
@@ -211,6 +241,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "31",
         "breed": "Japanese Chin",
         "group": "Toy",
         "size": "Toy",
@@ -218,6 +249,7 @@
         "coat": "Combination"
     },
     {
+        "id": "32",
         "breed": "Maltese",
         "group": "Toy",
         "size": "Toy",
@@ -225,6 +257,7 @@
         "coat": "Drop"
     },
     {
+        "id": "33",
         "breed": "Manchester Terrier",
         "group": "Toy",
         "size": "Toy",
@@ -232,6 +265,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "34",
         "breed": "Miniature Pinscher",
         "group": "Toy",
         "size": "Toy",
@@ -239,6 +273,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "35",
         "breed": "Papillon",
         "group": "Toy",
         "size": "Toy",
@@ -246,6 +281,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "36",
         "breed": "Pekingese",
         "group": "Toy",
         "size": "Toy",
@@ -253,6 +289,7 @@
         "coat": "Double"
     },
     {
+        "id": "37",
         "breed": "Pomeranian",
         "group": "Toy",
         "size": "Toy",
@@ -260,6 +297,7 @@
         "coat": "Double"
     },
     {
+        "id": "38",
         "breed": "Pug",
         "group": "Toy",
         "size": "Toy",
@@ -267,6 +305,7 @@
         "coat": "Short"
     },
     {
+        "id": "39",
         "breed": "Shih-Tzu",
         "group": "Toy",
         "size": "Toy",
@@ -274,6 +313,7 @@
         "coat": "Drop"
     },
     {
+        "id": "40",
         "breed": "Silky Terrier",
         "group": "Toy",
         "size": "Toy",
@@ -281,6 +321,7 @@
         "coat": "Drop"
     },
     {
+        "id": "41",
         "breed": "Yorkshire Terrier",
         "group": "Toy",
         "size": "Toy",
@@ -288,6 +329,7 @@
         "coat": "Drop"
     },
     {
+        "id": "42",
         "breed": "Bichon Frise",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -295,6 +337,7 @@
         "coat": "Curly"
     },
     {
+        "id": "43",
         "breed": "Boston Terrier",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -302,6 +345,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "44",
         "breed": "Bulldog",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -309,6 +353,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "45",
         "breed": "Chinese Shar-Pei",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -316,6 +361,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "46",
         "breed": "Chow Chow",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -323,6 +369,7 @@
         "coat": "Double"
     },
     {
+        "id": "47",
         "breed": "Dalmatian",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -330,6 +377,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "48",
         "breed": "French Bulldog",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -337,6 +385,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "49",
         "breed": "Lhasa Apso",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -344,6 +393,7 @@
         "coat": "Drop"
     },
     {
+        "id": "50",
         "breed": "Shiba Inu",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -351,6 +401,7 @@
         "coat": "Double"
     },
     {
+        "id": "51",
         "breed": "Schipperke",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -358,6 +409,7 @@
         "coat": "Double"
     },
     {
+        "id": "52",
         "breed": "Xoloitzcuintli",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -365,6 +417,7 @@
         "coat": "Hairless"
     },
     {
+        "id": "53",
         "breed": "Barbet",
         "group": "Sporting",
         "size": "Standard",
@@ -372,6 +425,7 @@
         "coat": "Curly"
     },
     {
+        "id": "54",
         "breed": "Boykin Spaniel",
         "group": "Sporting",
         "size": "Standard",
@@ -379,6 +433,7 @@
         "coat": "Curly"
     },
     {
+        "id": "55",
         "breed": "Brittany",
         "group": "Sporting",
         "size": "Standard",
@@ -386,6 +441,7 @@
         "coat": "Combination"
     },
     {
+        "id": "56",
         "breed": "Chesapeake Bay Retriever",
         "group": "Sporting",
         "size": "Standard",
@@ -393,6 +449,7 @@
         "coat": "Curly"
     },
     {
+        "id": "57",
         "breed": "Clumber Spaniel",
         "group": "Sporting",
         "size": "Standard",
@@ -400,6 +457,7 @@
         "coat": "Double"
     },
     {
+        "id": "58",
         "breed": "Cocker Spaniel",
         "group": "Sporting",
         "size": "Standard",
@@ -407,6 +465,7 @@
         "coat": "Double, Mix"
     },
     {
+        "id": "59",
         "breed": "English Setter",
         "group": "Sporting",
         "size": "Standard",
@@ -414,6 +473,7 @@
         "coat": "Combination"
     },
     {
+        "id": "60",
         "breed": "Springer Spaniel",
         "group": "Sporting",
         "size": "Standard",
@@ -421,6 +481,7 @@
         "coat": "Combination"
     },
     {
+        "id": "61",
         "breed": "German Pointer",
         "group": "Sporting",
         "size": "Standard",
@@ -428,6 +489,7 @@
         "coat": "Single/Flat, Wire"
     },
     {
+        "id": "62",
         "breed": "Golden Retriever",
         "group": "Sporting",
         "size": "Standard",
@@ -435,6 +497,7 @@
         "coat": "Double"
     },
     {
+        "id": "63",
         "breed": "Gordon Setter",
         "group": "Sporting",
         "size": "Standard",
@@ -442,6 +505,7 @@
         "coat": "Combination"
     },
     {
+        "id": "64",
         "breed": "Irish Setter",
         "group": "Sporting",
         "size": "Standard",
@@ -449,6 +513,7 @@
         "coat": "Combination"
     },
     {
+        "id": "65",
         "breed": "Labrador Retriever",
         "group": "Sporting",
         "size": "Standard",
@@ -456,6 +521,7 @@
         "coat": "Short"
     },
     {
+        "id": "66",
         "breed": "Nova Scotia Duck Tolling Retriever",
         "group": "Sporting",
         "size": "Standard",
@@ -463,6 +529,7 @@
         "coat": "Double"
     },
     {
+        "id": "67",
         "breed": "Vizsla",
         "group": "Sporting",
         "size": "Standard",
@@ -470,6 +537,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "68",
         "breed": "Weimeraner",
         "group": "Sporting",
         "size": "Standard",
@@ -477,6 +545,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "69",
         "breed": "Wirehaired Pinting Griffon",
         "group": "Sporting",
         "size": "Standard",
@@ -484,6 +553,7 @@
         "coat": "Wire"
     },
     {
+        "id": "70",
         "breed": "Airedale",
         "group": "Terrier",
         "size": "Standard",
@@ -491,6 +561,7 @@
         "coat": "Wire"
     },
     {
+        "id": "71",
         "breed": "American Staffordshire Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -498,6 +569,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "72",
         "breed": "Pitbull",
         "group": "Misc",
         "size": "Standard",
@@ -505,6 +577,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "73",
         "breed": "Bedlington Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -512,6 +585,7 @@
         "coat": "Curly"
     },
     {
+        "id": "74",
         "breed": "Border Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -519,6 +593,7 @@
         "coat": "Wire"
     },
     {
+        "id": "75",
         "breed": "Bull Terrier",
         "group": "Terrier",
         "size": "Standard, Mini",
@@ -526,6 +601,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "76",
         "breed": "Cairn Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -533,6 +609,7 @@
         "coat": "Combination"
     },
     {
+        "id": "77",
         "breed": "Kerry Blue Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -540,6 +617,7 @@
         "coat": "Wire"
     },
     {
+        "id": "78",
         "breed": "Lakeland Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -547,6 +625,7 @@
         "coat": "Wire"
     },
     {
+        "id": "79",
         "breed": "Schnauzer, Mini",
         "group": "Terrier",
         "size": "Mini",
@@ -554,6 +633,7 @@
         "coat": "Wire"
     },
     {
+        "id": "80",
         "breed": "Norfolk Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -561,6 +641,7 @@
         "coat": "Wire"
     },
     {
+        "id": "81",
         "breed": "Norwich Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -568,6 +649,7 @@
         "coat": "Wire"
     },
     {
+        "id": "82",
         "breed": "Rat Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -575,6 +657,7 @@
         "coat": "Short"
     },
     {
+        "id": "83",
         "breed": "Russell Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -582,6 +665,7 @@
         "coat": "Short"
     },
     {
+        "id": "84",
         "breed": "Parson Russell Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -589,6 +673,7 @@
         "coat": "Short"
     },
     {
+        "id": "85",
         "breed": "Scottish Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -596,6 +681,7 @@
         "coat": "Wire"
     },
     {
+        "id": "86",
         "breed": "West Highland White Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -603,6 +689,7 @@
         "coat": "Wire"
     },
     {
+        "id": "87",
         "breed": "Soft Coated Wheaten Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -610,6 +697,7 @@
         "coat": "Wire"
     },
     {
+        "id": "88",
         "breed": "Akita",
         "group": "Working",
         "size": "Standard",
@@ -617,6 +705,7 @@
         "coat": "Double"
     },
     {
+        "id": "89",
         "breed": "Alaskan Malamute",
         "group": "Working",
         "size": "Standard",
@@ -624,6 +713,7 @@
         "coat": "Double"
     },
     {
+        "id": "90",
         "breed": "Anatolian Shepherd",
         "group": "Working",
         "size": "Standard",
@@ -631,6 +721,7 @@
         "coat": "Double"
     },
     {
+        "id": "91",
         "breed": "Bernese Mountain Dog",
         "group": "Working",
         "size": "Standard",
@@ -638,6 +729,7 @@
         "coat": "Double"
     },
     {
+        "id": "92",
         "breed": "Boxer",
         "group": "Working",
         "size": "Standard",
@@ -645,6 +737,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "93",
         "breed": "Cane Corso",
         "group": "Working",
         "size": "Standard",
@@ -652,6 +745,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "94",
         "breed": "Doberman Pinscher",
         "group": "Working",
         "size": "Standard",
@@ -659,6 +753,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "95",
         "breed": "Dogo Argentino",
         "group": "Working",
         "size": "Standard",
@@ -666,6 +761,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "96",
         "breed": "Schnauzer",
         "group": "Working",
         "size": "Giant, Standard",
@@ -673,6 +769,7 @@
         "coat": "Wire"
     },
     {
+        "id": "97",
         "breed": "Great Dane",
         "group": "Working",
         "size": "Standard",
@@ -680,6 +777,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "98",
         "breed": "Great Pyrenees",
         "group": "Working",
         "size": "Standard",
@@ -687,6 +785,7 @@
         "coat": "Double"
     },
     {
+        "id": "99",
         "breed": "Greater Swiss Mountain Dog",
         "group": "Working",
         "size": "Standard",
@@ -694,6 +793,7 @@
         "coat": "Double"
     },
     {
+        "id": "100",
         "breed": "Newfoundland",
         "group": "Working",
         "size": "Standard",
@@ -701,6 +801,7 @@
         "coat": "Double"
     },
     {
+        "id": "101",
         "breed": "Portuguese Water Dog",
         "group": "Working",
         "size": "Standard",
@@ -708,6 +809,7 @@
         "coat": "Curly"
     },
     {
+        "id": "102",
         "breed": "Rotweiler",
         "group": "Working",
         "size": "Standard",
@@ -715,6 +817,7 @@
         "coat": "Short"
     },
     {
+        "id": "103",
         "breed": "Saint Bernard",
         "group": "Working",
         "size": "Standard",
@@ -722,6 +825,7 @@
         "coat": "Double"
     },
     {
+        "id": "104",
         "breed": "Samoyed",
         "group": "Working",
         "size": "Standard",
@@ -729,6 +833,7 @@
         "coat": "Double"
     },
     {
+        "id": "105",
         "breed": "Siberian Husky",
         "group": "Working",
         "size": "Standard",
@@ -736,6 +841,7 @@
         "coat": "Double"
     },
     {
+        "id": "106",
         "breed": "Tibetan Mastiff",
         "group": "Working",
         "size": "Standard",
@@ -743,6 +849,7 @@
         "coat": "Combination"
     },
     {
+        "id": "107",
         "breed": "Canaan Dog",
         "group": "Herding",
         "size": "Standard",
@@ -750,6 +857,7 @@
         "coat": "Double"
     },
     {
+        "id": "108",
         "breed": "German Shepherd",
         "group": "Herding",
         "size": "Standard",
@@ -757,13 +865,14 @@
         "coat": "Double"
     },
     {
+        "id": "109",
         "breed": "Puli",
         "group": "Herding",
         "size": "Standard",
         "hair": "Long",
-        "coat": "Corded"
     },
     {
+        "id": "110",
         "breed": "Pharaoh Hound",
         "group": "Hound",
         "size": "Standard",
@@ -771,6 +880,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "111",
         "breed": "Plott Hound",
         "group": "Hound",
         "size": "Standard",
@@ -778,6 +888,7 @@
         "coat": "Short"
     },
     {
+        "id": "112",
         "breed": "Rhodesian Ridgeback",
         "group": "Hound",
         "size": "Standard",
@@ -785,6 +896,7 @@
         "coat": "Single/Flat"
     },
     {
+        "id": "113",
         "breed": "Saluki",
         "group": "Hound",
         "size": "Standard",
@@ -792,6 +904,7 @@
         "coat": "Silky"
     },
     {
+        "id": "114",
         "breed": "Affenpinscher",
         "group": "Toy",
         "size": "Standard",
@@ -799,6 +912,7 @@
         "coat": "Wire"
     },
     {
+        "id": "115",
         "breed": "Keeshond",
         "group": "Non-Sporting",
         "size": "Standard",
@@ -806,6 +920,7 @@
         "coat": "Double"
     },
     {
+        "id": "116",
         "breed": "Flat-Coated Retriever",
         "group": "Sporting",
         "size": "Standard",
@@ -813,6 +928,7 @@
         "coat": "Double"
     },
     {
+        "id": "117",
         "breed": "Curly-Coated Retriever",
         "group": "Sporting",
         "size": "Standard",
@@ -820,6 +936,7 @@
         "coat": "Curly"
     },
     {
+        "id": "118",
         "breed": "Dandie Dinmont Terrier",
         "group": "Terrier",
         "size": "Standard",
@@ -827,6 +944,7 @@
         "coat": "Wire"
     },
     {
+        "id": "119",
         "breed": "Other",
         "group": "Other",
         "size": "Other",
