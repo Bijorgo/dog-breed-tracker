@@ -12,12 +12,7 @@
 
 //callbacks:
 function breedInput(breedData){
-    // value of text input
-    const breed = document.querySelector("#breed-lookup").value;
-    const selectedBreed = breedData.find(b => b === breed);
-    console.log(breed);
-    console.log("breedInput")
-    //if no breed found => handle it
+    
     // create object with info?
 }
 
@@ -55,8 +50,15 @@ function retrieveDogInfo() {
     .then(response => response.json())
     .then(breedData => {
             //do something with data
-        formInfo();
-        console.log("fetch request");
+        // value of text input
+        const breedInput = document.querySelector("#breed-lookup").value;
+        const matchedBreed = breedData.find(b => b.breed === breedInput);
+        console.log(matchedBreed);
+        console.log("breedInput")
+        //if no breed found => handle it
+        if (!matchedBreed) {
+            console.log("Breed not found");
+        }
         
     }) //closes .then()
     .catch(error => console.error("Error fetching data.", error));

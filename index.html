@@ -9,7 +9,7 @@
         <h1 class="heading">Dog Breed Tracker</h1>
         <h2>How to Use Tracker</h2>
         <p>how to detail</p>
-        <form>
+        <form name="dog-form" id="dog-form">
             <div id="mandatory-input">
                 <label>Breed
                     <input type="text" name="breed-search" id="breed-lookup">    
@@ -20,7 +20,7 @@
             </label>
             <br/><br/>
             <label>Name
-              <input type="text" name="name" id="name" placeholder="Optional">  
+              <input type="text" name="name" id="name" placeholder="Optional" autocomplete="on">  
             </label>
             <br/><br/>
             <div class="dropdown-group">
@@ -41,7 +41,7 @@
             <br/>
             <div class="dropdown-size">
                 <label>Size Type
-                    <select>
+                    <select name="select-size" id="select-size">
                         <option value="" style="display:none">Optional</option>
                         <option value="unknown-size">Unknown/Other</option>
                         <option value="giant">Giant</option>
@@ -54,7 +54,7 @@
             <br/>
             <div class="dropdown-hair-type">
                 <label>Hair Type
-                    <select>
+                    <select name="select-hair" id="select-hair">
                         <option value="" style="display:none">Optional</option>
                         <option value="unknown-hair">Unknown/Other</option>
                         <option value="wire">Wire-haired</option>
@@ -70,7 +70,7 @@
             <br/>
             <div class="dropdown-coat-type">
                 <label>Coat Type
-                    <select>
+                    <select name="select-coat" id="select-coat">
                         <option value="" style="display:none">Optional</option>
                         <option value="unknown-coat">Unknown/other</option>
                         <option value="">Curly</option>
