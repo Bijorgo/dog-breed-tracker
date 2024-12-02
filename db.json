@@ -1,11 +1,11 @@
 {
   "Dog Breeds": [
     {
-        "breed": "Peruvian Inca Orchid",
-        "group": "Misc",
-        "size": "Standard",
-        "hair": "Hairless",
-        "coat": "Hairless"
+        "breed": "Peruvian Inca Orchid", 
+            "group": "Misc",
+            "size": "Standard",
+            "hair": "Hairless",
+            "coat": "Hairless"
     },
     {
         "breed": "Doodle",
