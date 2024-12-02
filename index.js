@@ -1,4 +1,5 @@
 // Javascript Content Here
+console.log("JavaScript is running")
 //take input from form upon submit
     //fetch info from json .find()
     //create li under #list
@@ -12,23 +13,50 @@
 
 //callbacks:
 
+
+/*
+function forDogs(breedData) {
+    breedData.forEach(element => {
+        const makeSubList = document.createElement("ul");
+        const dogInList = document.createElement("li")
+    });
+}
+    */
+// hold information about breed in db
+function breedDish(matchedBreed) {
+    //
+}
+
 //submit handler
 function formInfo(breedData) {
-    const form = document.querySelector("#list");
+    const form = document.querySelector("#dog-form");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
+        console.log("form submitted");
         // value of text input
         const breedInput = document.querySelector("#breed-lookup").value.trim();
         console.log("Trimmed User Input:", breedInput);
         const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase());
-        console.log(matchedBreed);
-        console.log("breedInput check")
-        //if no breed found => handle it
+
+        //if no breed found => handle it-to be changed later 
         if (!matchedBreed) {
             console.log("Breed not found");
         } else {
             console.log("Found breed:", matchedBreed.breed);
         };
+
+        //console.log(matchedBreed + "breedInput check"); // debug
+        // create a space for new dog to go, add dog to list
+        const orderedListDogBreed = document.querySelector("#dogs");
+        const listADog = document.createElement("li");
+        listADog.textContent = matchedBreed.breed;
+        orderedListDogBreed.append(listADog);
+
+        breedDish(matchedBreed);
+
+
+
+        
         
         
 
@@ -36,7 +64,8 @@ function formInfo(breedData) {
     
 }; //closes formInfo()
 
-function retrieveDogInfo() {
+
+function main() {
     fetch("./db.json")
     .then(response => response.json())
     .then(data => {
@@ -48,7 +77,7 @@ function retrieveDogInfo() {
     }) //closes .then()
     .catch(error => console.error("Error fetching data.", error));
 }; //closes retrieveDogInfo()
-retrieveDogInfo();
+main();
 
 
 
@@ -72,13 +101,16 @@ retrieveDogInfo();
         /*
         //hold info from form
         const breed = document.querySelector("#breed-lookup").value;
+        // items only on forms:
         const mixedBreed = document.querySelector("#mix-yes").value;
         const dogName = document.querySelector("#name").value;
+        const coatColor = document.querySelector(".coat-color");
+        //items in db and on form, this collects form input
         const breedGroup = document.querySelector("#groups");
         const sizeType = document.querySelector("#dropdown-size");
         const hairType = document.querySelector("#dropdown-hair-type");
         const coatType = document.querySelector("#dropdown-coat-type");
-        const coatColor = document.querySelector(".coat-color");
+        
         const dogsInList = document.querySelector("#dogs");
         //match breed
         const selectedBreed = breedData.find(b => b === breed);
