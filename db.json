@@ -1,25 +1,28 @@
 {
   "Dog Breeds": [
     {
-        "breed": "Peruvian Inca Orchid", 
+        "Peruvian Inca Orchid": { 
             "group": "Misc",
             "size": "Standard",
             "hair": "Hairless",
             "coat": "Hairless"
+        }    
     },
     {
-        "breed": "Doodle",
-        "group": "Misc",
-        "size": "Standard, Mini, Toy",
-        "hair": "Long",
-        "coat": "Curly, Combination"
+        "Doodle": {
+            "group": "Misc",
+            "size": "Standard, Mini, Toy",
+            "hair": "Long",
+            "coat": "Curly, Combination"
+            }
     },
     {
-        "breed": "Austrailian Cattle Dog",
-        "group": "Herding",
-        "size": "Standard",
-        "hair": "Short",
-        "coat": "Short"
+        "Austrailian Cattle Dog" : {
+            "group": "Herding",
+            "size": "Standard",
+            "hair": "Short",
+            "coat": "Short"
+            }
     },
     {
         "breed": "Austrailian Shepherd",
