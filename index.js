@@ -24,7 +24,26 @@ function forDogs(breedData) {
     */
 // hold information about breed in db
 function breedDish(matchedBreed) {
-    //
+    //make unordered list for db information to go into
+    const extraList = document.createElement("ul");
+    //something.append(extraList)
+    const groupItem = document.createElement("li");
+    groupItem.textContent = matchedBreed.group;
+    extraList.append(groupItem);
+
+    const sizeItem = document.createElement("li");
+    sizeItem.textContent = matchedBreed.size;
+    extraList.append(sizeItem);
+
+    const hairItem = document.createElement("li");
+    hairItem.textContent = matchedBreed.hair;
+    extraList.append(hairItem);
+
+    const coatItem = document.createElement("li");
+    coatItem.textContent = matchedBreed.coat;
+    extraList.append(coatItem);
+
+    document.querySelector("li").append(extraList)
 }
 
 //submit handler
@@ -52,7 +71,20 @@ function formInfo(breedData) {
         listADog.textContent = matchedBreed.breed;
         orderedListDogBreed.append(listADog);
 
+        const nestedList = document.createElement("ul");
+
         breedDish(matchedBreed);
+
+        //nestedList.textContent = breedDish(matchedBreed);
+
+        //const nestedItems = document.createElement("li");
+        //nestedItems.textContent = breedDish(matchedBreed);
+        //nestedList.append(nestedItems);
+        listADog.append(nestedList);
+
+        
+        console.log(listADog);
+       
 
 
 
