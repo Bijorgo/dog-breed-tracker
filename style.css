@@ -1,0 +1,52 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+    background-image: linear-gradient(to bottom right,rgba(192, 129, 205, 0.75),rgb(94, 82, 111));
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center;
+}
+
+.heading {
+    border: 3px solid #35005b;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    background: rgba(148, 113, 155, 0.75);
+    box-shadow: 2px 5px 5px #333333;
+}
+
+form {
+    border: 3px solid #35005b;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    background: rgba(148, 113, 155, 0.75);
+    box-shadow: 2px 5px 5px #333333;
+}
+
+#list {
+    margin: 5px;
+    border: 3px solid #35005b;
+    background: rgba(148, 113, 155, 0.75);
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 5px 5px #333333;
+}
+
+#total-counter {
+    width: 20%;
+    margin: 5px;
+    border: 3px solid #35005b;
+    background: rgba(148, 113, 155, 0.75);
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 5px 5px #333333;
+    text-align: center;
+}
