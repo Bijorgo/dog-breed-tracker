@@ -1,44 +1,31 @@
-// Javascript Content Here
-console.log("JavaScript is running")
-//take input from form upon submit
-    //fetch info from json .find()
-    //create li under #list
-    //display name and append breed to li
-    //if no breed found-handle that
-    //increase counter by 1
-    //add "more info" button to each dog
-        //upon click, display more info
-    //add delete button to dog, click event listener
-    //create "favorite" function, dblclick event listener
+//index.js
 
-//callbacks:
+const xButton = document.createElement("button");
+xButton.textContent = "X";
 
-
-
-
-// hold information about breed in db
+// hold information about breed from db.json
 function breedDish(matchedBreed) {
-    //make unordered list for db information to go into
+    //make unordered list for additional sttributes to go into
     const extraList = document.createElement("ul");
-    //something.append(extraList)
+
     const groupItem = document.createElement("li");
-    groupItem.textContent = matchedBreed.group;
+    groupItem.textContent = "Group: " + matchedBreed.group;
     extraList.append(groupItem);
 
     const sizeItem = document.createElement("li");
-    sizeItem.textContent = matchedBreed.size;
+    sizeItem.textContent = "Size: " + matchedBreed.size;
     extraList.append(sizeItem);
 
     const hairItem = document.createElement("li");
-    hairItem.textContent = matchedBreed.hair;
+    hairItem.textContent = "Hair Type: " + matchedBreed.hair;
     extraList.append(hairItem);
 
     const coatItem = document.createElement("li");
-    coatItem.textContent = matchedBreed.coat;
+    coatItem.textContent = "Coat Type: " + matchedBreed.coat;
     extraList.append(coatItem);
 
     document.querySelector("li").append(extraList);
-    return extraList;
+    return extraList; // return full list without appending yet
 }; // close breedDish
 
 
@@ -53,29 +40,36 @@ function mousingHandler(listItem, matchedBreed) {
     listItem.addEventListener("mouseleave", (event) => {    
         if (extraList) {
             extraList.remove();
-            //extraList = null;
         };
     });
-    
-    
 }; // close mousing handler
 
 
-//submit handler
+
+
+// handle what happens when form is submitted 
 function submitFormInfo(breedData) {
 
     const form = document.querySelector("#dog-form");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        //console.log("form submitted");
-        // value of text input
+        // take breed typed in and match it with a breed in the database
         const breedInput = document.querySelector("#breed-lookup").value.trim();
         const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase());
 
         //if no breed found => handle it-to be changed later 
         if (!matchedBreed) {
-            console.log("Breed not found");
+            //console.log("Breed not found");
+            const alertDiv = document.querySelector("#alert");
+            const alert = document.createElement("p");
+            alert.textContent = "Breed not found. Please check your spelling or create a custom breed.";
+            alertDiv.append(alert);
+            alertDiv.append(xButton);
+            xButton.addEventListener("click", ()=> {
+                alertDiv.textContent = "";
+                form.reset();
+            });
         } else {
             console.log("Found breed:", matchedBreed.breed);
         };
@@ -89,8 +83,9 @@ function submitFormInfo(breedData) {
         // call event handler to display additional attributes from database
         mousingHandler(listADog, matchedBreed);
         
-       
+       form.reset();
     }); // closes addEventListener
+    
     
 }; //closes formInfo()
 
