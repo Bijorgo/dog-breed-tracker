@@ -58,13 +58,12 @@ function submitFormInfo(breedData) {
         const breedInput = document.querySelector("#breed-lookup").value.trim();
         const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase());
 
-        //if no breed found => handle it-to be changed later 
+        // if no breed is found, display text telling user what to do
         if (!matchedBreed) {
-            //console.log("Breed not found");
-            const alertDiv = document.querySelector("#alert");
-            const alert = document.createElement("p");
-            alert.textContent = "Breed not found. Please check your spelling or create a custom breed.";
-            alertDiv.append(alert);
+            const alertDiv = document.querySelector("#more");
+            const alertP = document.createElement("p");
+            alertP.textContent = "Breed not found. Please check your spelling or create a custom breed.";
+            alertDiv.append(alertP);
             alertDiv.append(xButton);
             xButton.addEventListener("click", ()=> {
                 alertDiv.textContent = "";
@@ -73,18 +72,26 @@ function submitFormInfo(breedData) {
         } else {
             console.log("Found breed:", matchedBreed.breed);
         };
-
         //console.log(matchedBreed + "breedInput check"); // debug
+
         // create a space for new dog to go, add dog to list
         const orderedListDogBreed = document.querySelector("#dogs");
         const listADog = document.createElement("li");
-        listADog.textContent = matchedBreed.breed;
-        orderedListDogBreed.append(listADog);
+        
         // call event handler to display additional attributes from database
         mousingHandler(listADog, matchedBreed);
+
+        //take name and mixed breed from form and use information
+        const nameInput = document.querySelector("#name");
+        const mixInput = document.querySelector("mix-yes");
+
+
+        listADog.textContent = "Breed: " + (matchedBreed.breed || "Unknown") + "   Name: " + (nameInput.value || "Unknown");
+        orderedListDogBreed.append(listADog);
+
         
        form.reset();
-    }); // closes addEventListener
+    }); // closes addEventListener, submit 
     
     
 }; //closes formInfo()
