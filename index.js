@@ -64,7 +64,7 @@ function submitFormInfo(breedData) {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         // take breed typed in and match it with a breed in the database
-        const breedInput = document.querySelector("#breed-lookup").value.trim();
+        const breedInput = document.querySelector("#breed-lookup").value.trim(); //trim trailing spaces from input
         const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase());
 
         // if no breed is found, display text telling user what to do
@@ -96,6 +96,17 @@ function submitFormInfo(breedData) {
         const nameInput = document.querySelector("#name");
         // set text that will be in each li
         listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix()) + "   Name: " + (nameInput.value || "Unknown");
+
+        //create a favoirte button
+        const favBtn = document.createElement("button");
+        const heart = '\u2661';
+        favBtn.textContent = heart;
+        listADog.append(favBtn);
+        favBtn.addEventListener("dblclick", () => {
+            const filledHeart = `\u2665`;
+            favBtn.textContent = filledHeart;
+        })
+
         // create a remove button plus functionality on click
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "X";
@@ -103,7 +114,7 @@ function submitFormInfo(breedData) {
             dogCounter--; // subtract 1 for each dog removed
             countInc.textContent = dogCounter;
             listADog.remove();
-        })
+        });
         // append elements to list item then item to list
         listADog.append(removeBtn);
         orderedListDogBreed.append(listADog);
@@ -122,31 +133,10 @@ function main() {
     fetch("./db.json")
     .then(response => response.json())
     .then(data => {
-            //do something with data
         const breedData = data["dog-breeds"];
         submitFormInfo(breedData);
-        
-        
-    }) //closes .then()
+    })
     .catch(error => console.error("Error fetching data.", error));
 }; //closes retrieveDogInfo()
+
 main();
-
-
-
-//NOTES:
-
-//Debugging under 2nd .then
-        /*
-        breedData.forEach(b => {
-            // Log the breed to see what's inside
-            console.log("Breed object:", b);
-
-            // Ensure the breed is a string
-            if (typeof b.breed !== 'string') {
-                console.error("Invalid breed data:", b);
-                return;
-            }
-            console.log(b.breed);
-        });
-        */
