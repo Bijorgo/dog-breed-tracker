@@ -44,8 +44,16 @@ function mousingHandler(listItem, matchedBreed) {
     });
 }; // close mousing handler
 
-
-
+function checkMix(){
+    const mixInput = document.querySelector("#mix-yes");
+    let mixed;
+    if (mixInput.checked) {
+        mixed = "(Mixed)";
+    }else {
+        mixed = "";
+    };  
+    return mixed;  
+};
 
 // handle what happens when form is submitted 
 function submitFormInfo(breedData) {
@@ -83,10 +91,10 @@ function submitFormInfo(breedData) {
 
         //take name and mixed breed from form and use information
         const nameInput = document.querySelector("#name");
-        const mixInput = document.querySelector("mix-yes");
 
 
-        listADog.textContent = "Breed: " + (matchedBreed.breed || "Unknown") + "   Name: " + (nameInput.value || "Unknown");
+
+        listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix()) + "   Name: " + (nameInput.value || "Unknown");
         orderedListDogBreed.append(listADog);
 
         
