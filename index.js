@@ -1,8 +1,5 @@
 //index.js
 
-const xButton = document.createElement("button");
-xButton.textContent = "X";
-
 // hold information about breed from db.json
 function breedDish(matchedBreed) {
     //make unordered list for additional sttributes to go into
@@ -26,9 +23,9 @@ function breedDish(matchedBreed) {
 
     document.querySelector("li").append(extraList);
     return extraList; // return full list without appending yet
-}; // close breedDish
+}; 
 
-
+// callback function to handle mouseenter and mouseleave events on list items 
 function mousingHandler(listItem, matchedBreed) {
     let extraList;
     //display extra attributes list when mousing over breed
@@ -42,8 +39,9 @@ function mousingHandler(listItem, matchedBreed) {
             extraList.remove();
         };
     });
-}; // close mousing handler
+}; 
 
+// callback function to use input from checkbox
 function checkMix(){
     const mixInput = document.querySelector("#mix-yes");
     let mixed;
@@ -72,6 +70,8 @@ function submitFormInfo(breedData) {
             const alertP = document.createElement("p");
             alertP.textContent = "Breed not found. Please check your spelling or create a custom breed.";
             alertDiv.append(alertP);
+            const xButton = document.createElement("button");
+            xButton.textContent = "X";
             alertDiv.append(xButton);
             xButton.addEventListener("click", ()=> {
                 alertDiv.textContent = "";
@@ -89,14 +89,19 @@ function submitFormInfo(breedData) {
         // call event handler to display additional attributes from database
         mousingHandler(listADog, matchedBreed);
 
-        //take name and mixed breed from form and use information
+        //take name from form and use information
         const nameInput = document.querySelector("#name");
-
-
-
+        // set text that will be in each li
         listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix()) + "   Name: " + (nameInput.value || "Unknown");
+        // create a remove button plus functionality on click
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "X";
+        removeBtn.addEventListener("click",() => {
+            listADog.remove();
+        })
+        // append elements to list item then item to list
+        listADog.append(removeBtn);
         orderedListDogBreed.append(listADog);
-
         
        form.reset();
     }); // closes addEventListener, submit 
