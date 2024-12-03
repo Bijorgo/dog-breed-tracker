@@ -42,13 +42,23 @@ function breedDish(matchedBreed) {
 }; // close breedDish
 
 
-function mEnterEventHandler(listItem, matchedBreed) {
+function mousingHandler(listItem, matchedBreed) {
+    let extraList;
+    //display extra attributes list when mousing over breed
     listItem.addEventListener("mouseenter", (event) => {
-        const extraList = breedDish(matchedBreed);
+        extraList = breedDish(matchedBreed);
         listItem.append(extraList);
+    });
+    // Remove the extra list when the mouse leaves    
+    listItem.addEventListener("mouseleave", (event) => {    
+        if (extraList) {
+            extraList.remove();
+            //extraList = null;
+        };
+    });
     
-    })
-}; // close mEnter 
+    
+}; // close mousing handler
 
 
 //submit handler
@@ -77,7 +87,7 @@ function submitFormInfo(breedData) {
         listADog.textContent = matchedBreed.breed;
         orderedListDogBreed.append(listADog);
         // call event handler to display additional attributes from database
-        mEnterEventHandler(listADog, matchedBreed);
+        mousingHandler(listADog, matchedBreed);
         
        
     }); // closes addEventListener
