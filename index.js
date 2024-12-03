@@ -57,6 +57,9 @@ function checkMix(){
 function submitFormInfo(breedData) {
 
     const form = document.querySelector("#dog-form");
+    // to keep track of number of dogs added to list 
+    const countInc = document.querySelector("#counter");
+    let dogCounter = 0;
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -97,11 +100,16 @@ function submitFormInfo(breedData) {
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "X";
         removeBtn.addEventListener("click",() => {
+            dogCounter--; // subtract 1 for each dog removed
+            countInc.textContent = dogCounter;
             listADog.remove();
         })
         // append elements to list item then item to list
         listADog.append(removeBtn);
         orderedListDogBreed.append(listADog);
+
+        dogCounter++; // add 1 to counter for each dog added
+        countInc.textContent = dogCounter;
         
        form.reset();
     }); // closes addEventListener, submit 
@@ -141,26 +149,4 @@ main();
             }
             console.log(b.breed);
         });
-        */
-
-        /*
-        //hold info from form
-        const breed = document.querySelector("#breed-lookup").value;
-        // items only on forms:
-        const mixedBreed = document.querySelector("#mix-yes").value;
-        const dogName = document.querySelector("#name").value;
-        const coatColor = document.querySelector(".coat-color");
-        //items in db and on form, this collects form input
-        const breedGroup = document.querySelector("#groups");
-        const sizeType = document.querySelector("#dropdown-size");
-        const hairType = document.querySelector("#dropdown-hair-type");
-        const coatType = document.querySelector("#dropdown-coat-type");
-        
-        const dogsInList = document.querySelector("#dogs");
-        //match breed
-        const selectedBreed = breedData.find(b => b === breed);
-        // create li under #dogs, set text
-        const newDog = document.createElement("li");
-        newDog.textContent = "Breed:" + (selectedBreed || "Unknown") + "Name:" + dogName;
-        dogsInList.append(newDog);
         */
