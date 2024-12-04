@@ -60,11 +60,13 @@ editBtn.textContent = "edit";
 
 
 //callback function to create edit text boxes
-function createEditForm(listADog){
+function createEditForm(listADog, nestedName, nestedComment){
 
     editBtn.addEventListener("click", () => {
         const form = document.createElement("form");
 
+
+/*
         const groupEdit = document.createElement("label");
         groupEdit.textContent = "Group: ";
 
@@ -118,6 +120,17 @@ function createEditForm(listADog){
         // attatch everything under group lable to the form
         form.append(groupEdit);
 
+*/      
+        // create text input to edit name
+        const editNameLabel = document.createElement("label");
+        editNameLabel.textContent = "Name: ";
+        const editNameText = document.createElement("input");
+        editNameText.type = "text";
+        editNameText.name = "edit-name"
+        editNameText.placeholder = "optional"
+        editNameLabel.append(editNameText);
+        form.append(editNameLabel);
+
         //create submit button
         const submitBtn = document.createElement("button");
         submitBtn.type = "submit";
@@ -126,7 +139,12 @@ function createEditForm(listADog){
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             //upon submit, do update new dog li
-            listADog.textContent = "TESTING";
+            //nestedName.textContent = "TESTING";
+            nestedName.textContent = "Name: " + (editNameText.value || "Unknown");
+            
+
+            //remove entire edit/form box
+            form.remove();
         });
 
 
@@ -213,7 +231,7 @@ function submitFormInfo(breedData) {
         });
 
 
-        createEditForm(listADog);
+        createEditForm(listADog, nestedName, nestedComment);
 
 
 
