@@ -1,4 +1,3 @@
-//index.js
 
 // hold information about breed from db.json
 function breedDish(matchedBreed) {
@@ -65,13 +64,13 @@ function submitFormInfo(breedData) {
         event.preventDefault();
         // take breed typed in and match it with a breed in the database
         const breedInput = document.querySelector("#breed-lookup").value.trim(); //trim trailing spaces from input
-        const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase());
+        const matchedBreed = breedData.find(b => b.breed.toLowerCase() === breedInput.toLowerCase()); //match input and data case
 
         // if no breed is found, display text telling user what to do
         if (!matchedBreed) {
             const alertDiv = document.querySelector("#more");
             const alertP = document.createElement("p");
-            alertP.textContent = "Breed not found. Please check your spelling or create a custom breed.";
+            alertP.textContent = `Breed not found. Please check your spelling or use breed "other".`;
             alertDiv.append(alertP);
             const xButton = document.createElement("button");
             xButton.textContent = "X";
@@ -88,22 +87,25 @@ function submitFormInfo(breedData) {
         // create a space for new dog to go, add dog to list
         const orderedListDogBreed = document.querySelector("#dogs");
         const listADog = document.createElement("li");
-        
+
+         // hold comments from form to be added to li text
+        const comment = document.querySelector("#comments").value;
+       
         // call event handler to display additional attributes from database
         mousingHandler(listADog, matchedBreed);
 
         //take name from form and use information
         const nameInput = document.querySelector("#name");
         // set text that will be in each li
-        listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix()) + "   Name: " + (nameInput.value || "Unknown");
+        listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix()) + "   Name: " + (nameInput.value || "Unknown") + " Comments: " + (comment);
 
-        //create a favoirte button
+        //create a favorite button
         const favBtn = document.createElement("button");
-        const heart = '\u2661';
+        const heart = '\u2661'; // exmpty heart symbol
         favBtn.textContent = heart;
         listADog.append(favBtn);
         favBtn.addEventListener("dblclick", () => {
-            const filledHeart = `\u2665`;
+            const filledHeart = `\u2665`; // filled heart symbol
             favBtn.textContent = filledHeart;
         })
 
@@ -123,10 +125,8 @@ function submitFormInfo(breedData) {
         countInc.textContent = dogCounter;
         
        form.reset();
-    }); // closes addEventListener, submit 
-    
-    
-}; //closes formInfo()
+    });  
+};
 
 
 function main() {
@@ -137,6 +137,6 @@ function main() {
         submitFormInfo(breedData);
     })
     .catch(error => console.error("Error fetching data.", error));
-}; //closes retrieveDogInfo()
+};
 
 main();
