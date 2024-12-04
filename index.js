@@ -52,11 +52,13 @@ function checkMix(){
     return mixed;  
 };
 
+
+/*
 const editBtn = document.createElement("button");
 editBtn.textContent = "edit";
 
 //callback function to create edit text boxes
-function editForm(){
+function createEditForm(listADog){
 
     editBtn.addEventListener("click", () => {
         const form = document.createElement("form");
@@ -114,12 +116,17 @@ function editForm(){
         // attatch everything under group lable to the form
         form.append(groupEdit);
 
-        
+        const submitBtn = document.createElement("submit");
+        submitBtn.addEventListener("submit", () => {
+            //upon submit, do update new dog li
+        });
 
         // attatch new form somwhere
         document.querySelector("#more").append(form);
     });
 };
+
+*/
 
 // handle what happens when form is submitted 
 function submitFormInfo(breedData) {
@@ -154,29 +161,36 @@ function submitFormInfo(breedData) {
         //console.log(matchedBreed + "breedInput check"); // debug
 
         // create a space for new dog to go, add dog to list
-        const orderedListDogBreed = document.querySelector("#dogs");
-        const listADog = document.createElement("li");
+        const orderedListDogBreed = document.querySelector("#dogs"); //static ol
+        const listADog = document.createElement("li"); // first item to go under ol
+        const nestedListADog = document.createElement("ul"); // dynamic nested ul to go under initial, ordered li
+        const nestedName = document.createElement("li");
+        const nestedComment = document.createElement("li");
 
-         // hold comments from form to be added to li text
+        // take matched breed and display as first ordered list item
+        listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix());
+
+         // hold comments from form add into a nested li
         const comment = document.querySelector("#comments").value;
-       
-        // call event handler to display additional attributes from database
-        mousingHandler(listADog, matchedBreed);
+        nestedComment.textContent = "Comment: " + comment;
 
-        //take name from form and use information
+        //take name from form and add into nested li
         const nameInput = document.querySelector("#name");
-        // set text that will be in each li
-        listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix()) + "   Name: " + (nameInput.value || "Unknown") + " Comments: " + (comment);
+        nestedName.textContent = "Name: " + (nameInput.value || "Unknown");
+
+        // append items into nest
+        nestedListADog.append(nestedName);
+        nestedListADog.append(nestedComment);
 
         //create a favorite button
         const favBtn = document.createElement("button");
         const heart = '\u2661'; // exmpty heart symbol
         favBtn.textContent = heart;
-        listADog.append(favBtn);
         favBtn.addEventListener("dblclick", () => {
             const filledHeart = `\u2665`; // filled heart symbol
             favBtn.textContent = filledHeart;
-        })
+        });
+        listADog.append(favBtn);
 
         // create a remove button plus functionality on click
         const removeBtn = document.createElement("button");
@@ -186,14 +200,24 @@ function submitFormInfo(breedData) {
             countInc.textContent = dogCounter;
             listADog.remove();
         });
-        // append elements to list item then item to list
         listADog.append(removeBtn);
-        listADog.append(editBtn);
-        orderedListDogBreed.append(listADog);
-        editForm();
 
-        dogCounter++; // add 1 to counter for each dog added
+        // append elements to list item then append list item to list
+        
+        //listADog.append(editBtn);
+        listADog.append(nestedListADog); // placed here so buttons show after breed first, then nested list 
+        orderedListDogBreed.append(listADog);
+
+        // add 1 to counter for each dog added
+        dogCounter++; 
         countInc.textContent = dogCounter;
+
+        // call event handler to display additional attributes from database
+        mousingHandler(listADog, matchedBreed);
+
+        //createEditForm(listADog);
+
+        
         
        form.reset();
     });  
