@@ -52,11 +52,11 @@ function checkMix(){
     return mixed;  
 };
 
-
-/*
+// create "edit" button with no functionality yet
 const editBtn = document.createElement("button");
 editBtn.textContent = "edit";
 
+/*
 //callback function to create edit text boxes
 function createEditForm(listADog){
 
@@ -166,6 +166,7 @@ function submitFormInfo(breedData) {
         const nestedListADog = document.createElement("ul"); // dynamic nested ul to go under initial, ordered li
         const nestedName = document.createElement("li");
         const nestedComment = document.createElement("li");
+        // items below are appended to listADog first, then append each dog to the full list
 
         // take matched breed and display as first ordered list item
         listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix());
@@ -190,8 +191,7 @@ function submitFormInfo(breedData) {
             const filledHeart = `\u2665`; // filled heart symbol
             favBtn.textContent = filledHeart;
         });
-        listADog.append(favBtn);
-
+        
         // create a remove button plus functionality on click
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "X";
@@ -200,11 +200,15 @@ function submitFormInfo(breedData) {
             countInc.textContent = dogCounter;
             listADog.remove();
         });
-        listADog.append(removeBtn);
 
-        // append elements to list item then append list item to list
-        
-        //listADog.append(editBtn);
+
+        //createEditForm(listADog);
+
+
+
+        listADog.append(favBtn);
+        listADog.append(removeBtn);
+        listADog.append(editBtn);
         listADog.append(nestedListADog); // placed here so buttons show after breed first, then nested list 
         orderedListDogBreed.append(listADog);
 
@@ -214,12 +218,8 @@ function submitFormInfo(breedData) {
 
         // call event handler to display additional attributes from database
         mousingHandler(listADog, matchedBreed);
-
-        //createEditForm(listADog);
-
         
-        
-       form.reset();
+        form.reset(); // clear form after submit
     });  
 };
 
