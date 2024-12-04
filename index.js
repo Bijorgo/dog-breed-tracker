@@ -131,6 +131,17 @@ function createEditForm(listADog, nestedName, nestedComment){
         editNameLabel.append(editNameText);
         form.append(editNameLabel);
 
+        //create text input to edit comment
+        const editCommentLabel = document.createElement("label");
+        editCommentLabel.textContent = "Comment: ";
+        const editCommentText = document.createElement("input");
+        editNameText.type = "text";
+        editNameText.name = "edit-comment"
+        editNameText.placeholder = "optional"
+        editCommentLabel.append(editCommentText);
+        form.append(editCommentLabel);
+
+
         //create submit button
         const submitBtn = document.createElement("button");
         submitBtn.type = "submit";
@@ -138,12 +149,15 @@ function createEditForm(listADog, nestedName, nestedComment){
         //handle a submission
         form.addEventListener("submit", (event) => {
             event.preventDefault();
-            //upon submit, do update new dog li
+            //upon submit, update new dog li
 
-            // update name or previously given name
+            // update name or retain previously given name
             const retainName = nestedName.textContent;
-            console.log(retainName);
             nestedName.textContent = "Name: " + (editNameText.value || retainName);
+
+            //update comment or retain original comment
+            const retainComment = nestedComment.textContent
+            nestedComment.textContent = "Comment: " + (editCommentText.value || retainComment);
             
 
             //remove entire edit/form box
