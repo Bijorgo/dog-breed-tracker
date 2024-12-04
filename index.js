@@ -56,7 +56,9 @@ function checkMix(){
 const editBtn = document.createElement("button");
 editBtn.textContent = "edit";
 
-/*
+
+
+
 //callback function to create edit text boxes
 function createEditForm(listADog){
 
@@ -79,7 +81,7 @@ function createEditForm(listADog){
         const houndOpt = document.createElement("option");
         houndOpt.value = "hounds";
         houndOpt.textContent = "Hounds";
-        groupSelect.append(miscOpt);
+        groupSelect.append(houndOpt);
         //SPORTING 
         const sportOpt = document.createElement("option");
         sportOpt.value = "sporting";
@@ -116,17 +118,26 @@ function createEditForm(listADog){
         // attatch everything under group lable to the form
         form.append(groupEdit);
 
-        const submitBtn = document.createElement("submit");
-        submitBtn.addEventListener("submit", () => {
+        //create submit button
+        const submitBtn = document.createElement("button");
+        submitBtn.type = "submit";
+        submitBtn.textContent = "submit";
+        //handle a submission
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
             //upon submit, do update new dog li
+            listADog.textContent = "TESTING";
         });
 
+
+        form.append(submitBtn); // attatch submit button to bottom of form
         // attatch new form somwhere
         document.querySelector("#more").append(form);
     });
 };
 
-*/
+
+
 
 // handle what happens when form is submitted 
 function submitFormInfo(breedData) {
@@ -202,7 +213,7 @@ function submitFormInfo(breedData) {
         });
 
 
-        //createEditForm(listADog);
+        createEditForm(listADog);
 
 
 
