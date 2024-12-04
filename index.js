@@ -52,6 +52,75 @@ function checkMix(){
     return mixed;  
 };
 
+const editBtn = document.createElement("button");
+editBtn.textContent = "edit";
+
+//callback function to create edit text boxes
+function editForm(){
+
+    editBtn.addEventListener("click", () => {
+        const form = document.createElement("form");
+
+        const groupEdit = document.createElement("label");
+        groupEdit.textContent = "Group: ";
+
+        // create dropdown to choose group
+        const groupSelect = document.createElement("select");
+
+        // create dropdown options, collect them in the dropdown
+        // MISC
+        const miscOpt = document.createElement("option");
+        miscOpt.value = "misc-group";
+        miscOpt.textContent = "Misc";
+        groupSelect.append(miscOpt);
+        //HOUND
+        const houndOpt = document.createElement("option");
+        houndOpt.value = "hounds";
+        houndOpt.textContent = "Hounds";
+        groupSelect.append(miscOpt);
+        //SPORTING 
+        const sportOpt = document.createElement("option");
+        sportOpt.value = "sporting";
+        sportOpt.textContent = "Sporting"
+        groupSelect.append(sportOpt);
+        //NON-SPORTING
+        const nonSpOpt = document.createElement("option");
+        nonSpOpt.value = "non-sporting";
+        nonSpOpt.textContent = "Non-Sporting";
+        groupSelect.append(nonSpOpt);
+        //TERRIER
+        const terrierOpt = document.createElement("option");
+        terrierOpt.value = "terrier";
+        terrierOpt.textContent = "Terrier";
+        groupSelect.append(terrierOpt);
+        //TOY
+        const toyOpt = document.createElement("option");
+        toyOpt.value = "toy";
+        toyOpt.textContent = "Toy";
+        groupSelect.append(toyOpt);
+        //WORKING
+        const workingOpt = document.createElement("option");
+        workingOpt.value = "working";
+        workingOpt.textContent = "Working";
+        groupSelect.append(workingOpt);
+        //HERDING
+        const herdingOpt = document.createElement("option");
+        herdingOpt.value = "herding";
+        herdingOpt.textContent = "Herding";
+        groupSelect.append(herdingOpt);
+
+        // attatch the group dropdown to a lable 
+        groupEdit.append(groupSelect);
+        // attatch everything under group lable to the form
+        form.append(groupEdit);
+
+        
+
+        // attatch new form somwhere
+        document.querySelector("#more").append(form);
+    });
+};
+
 // handle what happens when form is submitted 
 function submitFormInfo(breedData) {
 
@@ -119,7 +188,9 @@ function submitFormInfo(breedData) {
         });
         // append elements to list item then item to list
         listADog.append(removeBtn);
+        listADog.append(editBtn);
         orderedListDogBreed.append(listADog);
+        editForm();
 
         dogCounter++; // add 1 to counter for each dog added
         countInc.textContent = dogCounter;
