@@ -139,8 +139,11 @@ function createEditForm(listADog, nestedName, nestedComment){
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             //upon submit, do update new dog li
-            //nestedName.textContent = "TESTING";
-            nestedName.textContent = "Name: " + (editNameText.value || "Unknown");
+
+            // update name or previously given name
+            const retainName = nestedName.textContent;
+            console.log(retainName);
+            nestedName.textContent = "Name: " + (editNameText.value || retainName);
             
 
             //remove entire edit/form box
@@ -229,7 +232,6 @@ function submitFormInfo(breedData) {
             countInc.textContent = dogCounter;
             listADog.remove();
         });
-
 
         createEditForm(listADog, nestedName, nestedComment);
 
