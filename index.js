@@ -1,25 +1,46 @@
 
 // hold information about breed from db.json
-function breedDish(matchedBreed) {
+
+// hold text input from static form
+function dogDisplay(storeDogInfo){
+    // create list items
+    const nestedBreed = document.createElement("li");
+    const formList = document.createElement("ul")
+    const nestedName = document.createElement("li");
+    const nestedComment = document.createElement("li");
+
+    // set text content
+    nestedBreed.textContent = "Breed: " + storeDogInfo.breed + (checkMix());
+    nestedName.textContent = "Name: " + (storeDogInfo.name || "Unknown");
+    nestedComment.textContent = "Comment: " + (storeDogInfo.comment || "None");
+
+    //append into nested lists
+    formList.append(nestedName);
+    formList.append(nestedComment);
+    nestedBreed.append(formList);
+    return nestedBreed;
+};
+
+function breedDish(storeDogInfo) {
     //make unordered list for additional sttributes to go into
     const extraList = document.createElement("ul");
 
     const groupItem = document.createElement("li");
     groupItem.id = "group-item";
-    groupItem.textContent = "Group: " + matchedBreed.group;
+    groupItem.textContent = "Group: " + storeDogInfo.group;
     extraList.append(groupItem);
 
     const sizeItem = document.createElement("li");
     sizeItem.id = "size-item"
-    sizeItem.textContent = "Size: " + matchedBreed.size;
+    sizeItem.textContent = "Size: " + storeDogInfo.size;
     extraList.append(sizeItem);
 
     const hairItem = document.createElement("li");
-    hairItem.textContent = "Hair Type: " + matchedBreed.hair;
+    hairItem.textContent = "Hair Type: " + storeDogInfo.hair;
     extraList.append(hairItem);
 
     const coatItem = document.createElement("li");
-    coatItem.textContent = "Coat Type: " + matchedBreed.coat;
+    coatItem.textContent = "Coat Type: " + storeDogInfo.coat;
     extraList.append(coatItem);
 
     document.querySelector("li").append(extraList);
@@ -27,15 +48,15 @@ function breedDish(matchedBreed) {
 }; 
 
 // callback function to handle mouseenter and mouseleave events on list items 
-function mousingHandler(listItem, matchedBreed) {
+function mousingHandler(storeDogInfo, displayNest) {
     let extraList;
     //display extra attributes list when mousing over breed
-    listItem.addEventListener("mouseenter", (event) => {
-        extraList = breedDish(matchedBreed);
-        listItem.append(extraList);
+    displayNest.addEventListener("mouseenter", (event) => {
+        extraList = breedDish(storeDogInfo);
+        displayNest.append(extraList);
     });
     // Remove the extra list when the mouse leaves    
-    listItem.addEventListener("mouseleave", (event) => {    
+    displayNest.addEventListener("mouseleave", (event) => {    
         if (extraList) {
             extraList.remove();
         };
@@ -54,102 +75,9 @@ function checkMix(){
     return mixed;  
 };
 
-function createEdit(nestedName, nestedComment){
-    // create "edit" button
-    const editBtn = document.createElement("button");
-    editBtn.textContent = "edit"; 
-    //handle edit event
-    editBtn.addEventListener("click", () => {
-        const form = document.createElement("form");
-        form.name = "edit-form";
-        form.id = "edit-form";
-    
-        // create text input to edit name
-        const editNameLabel = document.createElement("label");
-        editNameLabel.textContent = "Name: ";
-        const editNameText = document.createElement("input");
-        editNameText.type = "text";
-        editNameText.name = "edit-name"
-        editNameText.placeholder = "optional"
-        editNameLabel.append(editNameText);
-        form.append(editNameLabel);
-
-        //create text input to edit comment
-        const editCommentLabel = document.createElement("label");
-        editCommentLabel.textContent = "Comment: ";
-        const editCommentText = document.createElement("input");
-        editCommentText.type = "text";
-        editCommentText.name = "edit-comment"
-        editCommentText.placeholder = "optional"
-        editCommentLabel.append(editCommentText);
-        form.append(editCommentLabel);
-
-        //create size text input 
-        /*
-        const editSizeLabel = document.createElement("label");
-        editSizeLabel.textContent = "Size: ";
-        const editSizeText = document.createElement("input");
-        editSizeText.type = "text";
-        editSizeText.name = "edit-size"
-        editSizeText.placeholder = "optional"
-        editSizeLabel.append(editSizeText);
-        form.append(editSizeLabel);
-        */
-
-        //create submit button
-        const submitBtn = document.createElement("button");
-        submitBtn.type = "submit";
-        submitBtn.textContent = "submit";
-        //handle a submission
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            //upon submit, update new dog li
-
-            // update name or retain previously given name
-            const retainName = nestedName.textContent.split(": ")[1];
-            nestedName.textContent = "Name: " + (editNameText.value || retainName);
-
-            console.log(nestedComment + " -NESTED comment");
-            console.log(nestedComment.textContent + " -C Text Here");
-            console.log(nestedName + " -nested Name HERE")
-            console.log(nestedName.textContent + " -NAME TEXT HERE")
-
-            //update comment or retain original comment
-            const retainComment = nestedComment.textContent.split(": ")[1];
-            nestedComment.textContent = "Comment: " + (editCommentText.value || retainComment);
-            /*
-
-            //SIZE
-            const newSize = editSizeText.value;
-            const retainSize = nestedListADog.querySelector("#size-item").textContent;  // existing size
-        
-            // Update the size item if new size is provided, otherwise keep the original
-            const updatedSize = newSize || retainSize;
-            nestedListADog.querySelector("#size-item").textContent = "Size: " + updatedSize;*/
-            
-
-            //remove entire edit/form box
-            form.remove();
-        });
-
-        form.append(submitBtn); // attatch submit button to bottom of form
-        // attatch new form somwhere
-        document.querySelector("#more").append(form);
-    });
-    return editBtn;
-};
 
 
-
-
-
-
-
-
-
-
-
-// handle what happens when form is submitted 
+// handle what happens when static form is submitted 
 function submitFormInfo(breedData) {
 
     const form = document.querySelector("#dog-form");
@@ -182,33 +110,22 @@ function submitFormInfo(breedData) {
         };
         //console.log(matchedBreed + "breedInput check"); // debug
 
+        // hold input infomration
+        const commentInput = document.querySelector("#comments").value;
+        const nameInput = document.querySelector("#name").value;
+
         // create a space for new dog to go, add dog to list
         const orderedListDogBreed = document.querySelector("#dogs"); //static ol
-        const listADog = document.createElement("li"); // first item to go under ol
-        const nestedListADog = document.createElement("ul"); // dynamic nested ul to go under initial, ordered li
-        const nestedName = document.createElement("li");
-        const nestedComment = document.createElement("li");
-        // items below are appended to listADog first, then append each dog to the full list
+        //const listADog = document.createElement("li"); // first item to go under ol
 
-        // take matched breed and display as first ordered list item
-        listADog.textContent = "Breed: " + (matchedBreed.breed) + (checkMix());
+        // hold all information in new object
+        const storeDogInfo = { "breed": matchedBreed.breed, "comment": commentInput, "name": nameInput, "group": matchedBreed.group, "size": matchedBreed.size, "hair": matchedBreed.hair, "coat": matchedBreed.coat, "li": orderedListDogBreed, }
 
-         // hold comments from form add into a nested li
-        const comment = document.querySelector("#comments").value;
-        nestedComment.textContent = "Comment: " + (comment || "none");
+        // call dogDisplay() to display name, breed, comment with matched information
+        const displayNest = dogDisplay(storeDogInfo);
+        orderedListDogBreed.append(displayNest);
 
-        //take name from form and add into nested li
-        const nameInput = document.querySelector("#name");
-        nestedName.textContent = "Name: " + (nameInput.value || "Unknown");
-
-        console.log( "what is nestedName right after defining?  " + nestedName.value)
-        console.log(nameInput.value + " -NAME INPUT")
-
-        // append items into nest
-        nestedListADog.append(nestedName);
-        nestedListADog.append(nestedComment);
-
-        //create a favorite button
+        // create a favorite button
         const favBtn = document.createElement("button");
         const heart = '\u2661'; // exmpty heart symbol
         favBtn.textContent = heart;
@@ -223,35 +140,31 @@ function submitFormInfo(breedData) {
         removeBtn.addEventListener("click",() => {
             dogCounter--; // subtract 1 for each dog removed
             countInc.textContent = dogCounter;
-            listADog.remove();
+            displayNest.remove();
+            favBtn.remove();
+            removeBtn.remove();
         });
 
-
-
-        listADog.append(favBtn);
-        listADog.append(removeBtn);
-        const editBtn = createEdit(nestedName, nestedComment);
-        listADog.append(editBtn);
-        listADog.append(nestedListADog); // placed here so buttons show after breed first, then nested list 
-        orderedListDogBreed.append(listADog);
-
+        orderedListDogBreed.append(favBtn);
+        orderedListDogBreed.append(removeBtn);
         
-        
-
-        
+        //const editBtn = createEdit(storeDogInfo, displayNest, listADog);
+        //listADog.append(editBtn);
+        //orderedListDogBreed.append(orderedListDogBreed);
 
         // add 1 to counter for each dog added
         dogCounter++; 
         countInc.textContent = dogCounter;
 
         // call event handler to display additional attributes from database
-        mousingHandler(listADog, matchedBreed);
+        mousingHandler(storeDogInfo, displayNest);
         
         form.reset(); // clear form after submit
     });  
+    
 };
 
-
+// make connection with data, retrieve information that JavaScript can read
 function main() {
     fetch("./db.json")
     .then(response => response.json())
@@ -266,7 +179,12 @@ main();
 
 
 
-//NOTES
+
+
+
+
+
+// Work for future improvements 
 /*
         const groupEdit = document.createElement("label");
         groupEdit.textContent = "Group: ";
@@ -321,4 +239,101 @@ main();
         // attatch everything under group lable to the form
         form.append(groupEdit);
 
+*/
+
+/*
+        //create size text input 
+        const editSizeLabel = document.createElement("label");
+        editSizeLabel.textContent = "Size: ";
+        const editSizeText = document.createElement("input");
+        editSizeText.type = "text";
+        editSizeText.name = "edit-size"
+        editSizeText.placeholder = "optional"
+        editSizeLabel.append(editSizeText);
+        form.append(editSizeLabel);
+        */
+
+        //const retainSize = storeDogInfo.size;
+        //const newSize = (editSizeText.value || retainSize);
+        //storeDogInfo.size = newSize;
+        //displayNest.querySelector("li:nth-child(1)").textContent = "Name: " + (newName || retainName);
+        //displayNest.querySelector("li:nth-child(2)").textContent = "Comment: " + (newComment || retainComment);
+        //const extraList = breedDish(storeDogInfo);
+        //displayNest.querySelector("ul").append(extraList);
+
+        /*
+function createEdit(storeDogInfo, displayNest, listADog){
+    // create "edit" button
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "edit"; 
+    //handle edit event
+    editBtn.addEventListener("click", () => {
+
+        //const existingForm = document.querySelector("edit-form")
+        if (listADog){
+            listADog.remove();
+        };
+
+        // create new form
+        const form = document.createElement("form");
+        form.name = "edit-form";
+        form.id = "edit-form";
+    
+        // create text input to edit name
+        const editNameLabel = document.createElement("label");
+        editNameLabel.textContent = "Name: ";
+        const editNameText = document.createElement("input");
+        editNameText.type = "text";
+        editNameText.name = "edit-name"
+        editNameText.placeholder = "optional"
+        editNameLabel.append(editNameText);
+        form.append(editNameLabel);
+
+        //create text input to edit comment
+        const editCommentLabel = document.createElement("label");
+        editCommentLabel.textContent = "Comment: ";
+        const editCommentText = document.createElement("input");
+        editCommentText.type = "text";
+        editCommentText.name = "edit-comment"
+        editCommentText.placeholder = "optional"
+        editCommentLabel.append(editCommentText);
+        form.append(editCommentLabel);
+
+        //create submit button
+        const submitBtn = document.createElement("button");
+        submitBtn.type = "submit";
+        submitBtn.textContent = "submit";
+
+        //handle a submission
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            //const newDish = breedDish(storeDogInfo);
+
+            // retain original information
+            const retainName = storeDogInfo.name;
+            const retainComment = storeDogInfo.comment;
+            
+
+            const newName = (editNameText.value || retainName);
+            const newComment = (editCommentText.value || retainComment);
+            
+
+            storeDogInfo.name = newName;
+            storeDogInfo.comment = newComment;
+            
+            //const listADog = document.createElement("li"); // first item to go under ol
+
+            const displayNest = dogDisplay(storeDogInfo);
+            listADog.append(displayNest);
+
+            //remove entire edit/form box
+            form.remove();
+        });
+
+        form.append(submitBtn); // attatch submit button to bottom of form
+        // attatch new form somwhere
+        document.querySelector("#more").append(form);
+    });
+    return editBtn;
+};
 */
